@@ -9,7 +9,7 @@ class MinystryHealth:
         if size > 0:
             self._size = size
         else:
-            self._size = Polyclinics.DEFAULT_SIZE
+            self._size = MinystryHealth.DEFAULT_SIZE
 
     @property
     def size(self):
@@ -19,7 +19,7 @@ class MinystryHealth:
         return len(self._ls)
 
     def add(self, polyclinic):
-        if isinstance(polyclinic, Polyclinic):
+        if isinstance(polyclinic, MinystryHealth):
             self._ls.append(polyclinic)
 
     def __getitem__(self, index):
